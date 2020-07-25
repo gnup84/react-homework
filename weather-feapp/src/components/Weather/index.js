@@ -22,7 +22,7 @@ class Weather extends React.Component {
     const { cityName } = this.props.match.params;
     const api = API_WEATHER;
     const weather = await fetch(api + cityName)
-    .then(res => res.json().catch())
+    .then(res => res.json())
     .then(jason => this.setState( {
       "weather":
         {
